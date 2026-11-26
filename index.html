@@ -10,8 +10,11 @@ header{padding:20px 6%;display:flex;align-items:center;justify-content:space-bet
 .logo{font-weight:900;letter-spacing:2px;color:var(--gold);font-size:22px}.logo small{display:block;color:#eee;font-size:9px;letter-spacing:4px;margin-top:4px}
 button,.btn{border:0;border-radius:9px;padding:11px 15px;font-weight:700;cursor:pointer;text-decoration:none;display:inline-block}
 .primary{background:linear-gradient(135deg,#f1d48a,#b9872d);color:#17120a}.outline{background:transparent;border:1px solid var(--gold);color:var(--gold)}
-.hero{padding:68px 6% 48px;text-align:center}.eyebrow{color:var(--gold);letter-spacing:4px;font-size:11px;font-weight:bold}
-h1{font-size:clamp(38px,7vw,70px);margin:12px 0;color:#f7e8c5;letter-spacing:2px}.hero p{color:var(--muted);max-width:580px;margin:0 auto 24px;line-height:1.6}
+.hero{position:relative;min-height:clamp(260px,42vw,500px);padding:0 6%;display:flex;align-items:center;justify-content:center;text-align:center;background:#080808 url("banner-elite-store.png") center/cover no-repeat;border-bottom:1px solid #60491e}
+.hero:before{content:"";position:absolute;inset:0;background:linear-gradient(90deg,#05050555,#05050522,#05050555)}
+.hero-content{position:relative;z-index:1;width:min(100%,900px);padding:38px 16px;text-shadow:0 2px 12px #000}
+.eyebrow{color:var(--gold);letter-spacing:4px;font-size:11px;font-weight:bold}
+h1{font-size:clamp(38px,7vw,70px);margin:12px 0;color:#f7e8c5;letter-spacing:2px}.hero p{color:#eee;max-width:580px;margin:0 auto 24px;line-height:1.6}
 .wrap{max-width:1120px;margin:auto;padding:0 22px 70px}.bar{display:flex;gap:12px;justify-content:space-between;align-items:center;flex-wrap:wrap;margin:20px 0}
 input,textarea{width:100%;background:#0d0d0d;color:#fff;border:1px solid #383838;border-radius:8px;padding:12px;font:inherit}
 input[type=file]{padding:10px;border-style:dashed}.search{max-width:320px}.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:18px}
@@ -23,12 +26,12 @@ input[type=file]{padding:10px;border-style:dashed}.search{max-width:320px}.grid{
 footer{text-align:center;padding:25px;color:#777;border-top:1px solid #292929;font-size:12px}
 .modal{display:none;position:fixed;inset:0;background:#000b;z-index:5;overflow:auto;padding:25px}.modal.show{display:block}.dialog{max-width:520px;margin:30px auto;background:#171717;border:1px solid #5a4828;border-radius:15px;padding:22px}.dialog h2{color:var(--gold);margin-top:0}.field{margin:12px 0}.field label{display:block;color:#bbb;font-size:12px;margin-bottom:6px}.row{display:flex;gap:9px;flex-wrap:wrap}.row>*{flex:1}.note{font-size:11px;color:#888;line-height:1.5;margin-top:20px}
 #manage>div{display:flex;gap:8px;align-items:center;justify-content:space-between;border-bottom:1px solid #333;padding:9px 0;flex-wrap:wrap}
-@media(max-width:560px){header{padding:15px 4%}.logo{font-size:18px}.hero{padding:48px 5% 35px}.search{max-width:none;width:100%}}
+@media(max-width:560px){header{padding:15px 4%}.logo{font-size:18px}.hero{min-height:240px;padding:0 4%}.hero-content{padding:25px 8px}.search{max-width:none;width:100%}}
 </style>
 </head>
 <body>
 <header><div class="logo">ELITE STORE<small>CATÁLOGO GAMER</small></div><button class="outline" onclick="openAdmin()">Painel da loja</button></header>
-<section class="hero"><div class="eyebrow">BEM-VINDO À ELITE</div><h1>SUA LOJA GAMER</h1><p>Confira os itens disponíveis, veja os detalhes e fale com a loja para tirar dúvidas.</p><a class="btn primary" href="#catalogo">VER CATÁLOGO</a></section>
+<section class="hero"><div class="hero-content"><div class="eyebrow">BEM-VINDO À ELITE</div><h1>SUA LOJA GAMER</h1><p>Produtos e ofertas para quem leva o mundo gamer a sério. Confira o catálogo e fale com a nossa equipe!</p><a class="btn primary" href="#catalogo">VER CATÁLOGO</a></div></section>
 <main class="wrap" id="catalogo">
 <div class="bar"><div><div class="eyebrow">VITRINE</div><h2 style="margin:7px 0">Catálogo disponível</h2></div><input class="search" id="search" placeholder="Buscar no catálogo..." oninput="render()"></div>
 <div class="grid" id="grid"><div class="empty">Carregando catálogo...</div></div>
