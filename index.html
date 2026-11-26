@@ -50,7 +50,7 @@ footer{text-align:center;padding:25px;color:#777;border-top:1px solid #292929;fo
 <div class="field"><label>Nome do item</label><input id="name" placeholder="Ex.: Item 001"></div>
 <div class="field"><label>Preço (R$)</label><input id="price" type="number" min="0" step="0.01" placeholder="50.00"></div>
 <div class="field"><label>Descrição</label><textarea id="desc" rows="3" placeholder="Descreva o item sem incluir dados de acesso."></textarea></div>
-<div class="field"><label>Escolher foto da galeria (opcional)</label><input id="imageFile" type="file" accept="image/*" capture="environment"><p class="note" style="margin-top:6px">Escolha uma imagem do celular. Ela será enviada ao armazenamento do Supabase.</p></div>
+<div class="field"><label>Escolher foto da galeria (opcional)</label><input id="imageFile" type="file" accept="image/*"><p class="note" style="margin-top:6px">Escolha uma imagem do celular. Ela será enviada ao armazenamento do Supabase.</p></div>
 <div class="field"><label>Ou cole o link de uma imagem pública (opcional)</label><input id="img" type="url" placeholder="https://..."></div>
 <div class="row"><button class="primary" onclick="saveItem()">Salvar item</button><button class="outline" onclick="resetForm()">Limpar</button></div>
 <h3 style="margin-top:25px">Itens cadastrados</h3><div id="manage"></div>
